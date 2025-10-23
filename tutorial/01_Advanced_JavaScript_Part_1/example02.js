@@ -9,10 +9,10 @@ var randomNumber = Math.floor(Math.random() * 100) + 1;
 // console.log(`randomNumber is ${randomNumber}`);
 
 var counter = 0;
-
+let userGuess;
 do {
 
-  var userGuess    = parseInt(input.question("Enter your guess >> "));
+  userGuess    = parseInt(input.question("Enter your guess >> "));
   counter++;
 
   // console.log(typeof userGuess);
@@ -27,3 +27,5 @@ do {
   }
 
 } while (randomNumber != userGuess ); // repeat while the guess is wrong
+
+
