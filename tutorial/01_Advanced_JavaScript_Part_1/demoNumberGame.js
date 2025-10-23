@@ -9,7 +9,7 @@
 const input = require("readline-sync");
 
 console.clear();
-console.log("Welcom to the number guesssing game");
+console.log("Welcome to the number guesssing game");
 
 let randomNumber = Math.floor(Math.random() * 100) + 1; // random number between 1 to 100
 
