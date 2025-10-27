@@ -23,5 +23,4 @@ function testScope() {
     // console.log(b); // Unaccessible: would throw ReferenceError, let is block-scoped 
     // console.log(c); // Unaccessible: would throw ReferenceError, const is block-scoped
 }   
-
 testScope();
