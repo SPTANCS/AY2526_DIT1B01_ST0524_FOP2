@@ -5,8 +5,14 @@
 // 0000 to 0200  (Off Peak) - $11.00
 // 0200 to 1000  (No Screen Time)
 // First 2 days of movie premiere - $21.00
-
+console.clear();
 let input = require("readline-sync");
+
+// Ticket Type
+const OFFPEAK = 0;
+const NORMAL = 1;
+const PREMIERE = 2;
+const NOSCREENTIME = 3;
 
 // Global Scope
 const type = ["offpeak", "normal", "premiere", "no screen time"];
@@ -15,12 +21,6 @@ const ticketprice = [11.0, 15.0, 21.0, 0.0];
 // Block Scope
 // Ticket type
 function ticketType(time) {
-  // Ticket Type
-  const OFFPEAK = 0;
-  const NORMAL = 1;
-  const PREMIERE = 2;
-  const NOSCREENTIME = 3;
-
   // Time is 0 means it is premiere tickets
   if (time == 0) {
     return PREMIERE;
@@ -50,7 +50,7 @@ let price = buyticket(ticketTime);
 let tType;
 // Block Scope
 {
-  let tType = "";
+  // let tType = "";
   if (ticketTime == 0) {
     console.log("Premier Tickets");
     tType = type[PREMIERE];
