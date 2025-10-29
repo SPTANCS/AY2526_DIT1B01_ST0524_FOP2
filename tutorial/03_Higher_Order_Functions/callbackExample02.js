@@ -1,15 +1,20 @@
 const input = require("readline-sync");
+// callback function are functions passed as arguments to other functions
+// They are commonly used in higher-order functions to customize behavior
+// or to handle asynchronous operations.
 
-// Higher-order function that asks a question until a valid answer is given
-// The validation logic is provided via a callback function
-// validate: function that takes input and returns true if valid, false otherwise
+
+// askUntilValid is a Higher-order function that asks a question until a valid answer is given
+// The validation logic is provided via a callback function 'validate'
+// question: string to ask the user
+// validate: function that takes an input and returns true if valid, false otherwise
 function askUntilValid(question, validate) {
-  let answer;
-  let isValid;
+  let answer;  // store user answer 
+  let isValid; // store validation result
 
   do {
-    answer = input.question(question);
-    isValid = validate(answer); // Call the callback function to validate
+    answer = input.question(question); // ask question
+    isValid = validate(answer);        // Call the callback function to validate
 
     if (!isValid) { // the value is inValid
       console.log("Invalid input. Please try again.\n");
@@ -22,7 +27,7 @@ function askUntilValid(question, validate) {
 // Check if input is a number between 1 and 10
 function isOneToTen(value) {
   const num = parseInt(value);
-  return !isNaN(num) && num >= 1 && num <= 10;
+  return !isNaN(num) && num >= 1 && num <= 10; // read about isNaN function here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN
 }
 
 // Check if input is a option

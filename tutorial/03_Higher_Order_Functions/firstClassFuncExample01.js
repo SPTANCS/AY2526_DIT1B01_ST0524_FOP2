@@ -1,4 +1,7 @@
 // Example demonstrating first-class functions in JavaScript
+// A first-class function is a function that can be treated like any other variable.
+// This means you can assign functions to variables, pass them as arguments to other functions, 
+// and return them from other functions.
 
 // A function that doubles a number
 function doubleMyNumber(num) {

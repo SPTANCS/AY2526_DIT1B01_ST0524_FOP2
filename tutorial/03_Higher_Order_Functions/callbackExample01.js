@@ -1,4 +1,3 @@
-// validateInputDemo.js
 const input = require("readline-sync");
 
 // === Without Callback Functions ===
