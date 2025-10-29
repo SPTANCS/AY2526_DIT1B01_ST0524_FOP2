@@ -6,6 +6,8 @@
 
 // Example demonstrating higher-order functions in JavaScript - Takes another function as an argument
 // A higher-order function that calls a given function 'xTimes'
+// func - function to be called
+// xTimes - number of times to call the function
 function callFuncXTimes(func, xTimes) {
     for (let i = 0; i < xTimes; i++) {
         func();
