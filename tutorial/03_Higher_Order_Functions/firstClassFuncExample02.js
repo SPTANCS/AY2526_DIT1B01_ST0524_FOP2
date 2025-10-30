@@ -33,17 +33,23 @@ console.log("Welcome to Higher Order Functions Example 01\n");
 
 // we are going to replace this code by using first class functions concepts
 // start of code to replace
-let rabdomSelect = Math.floor(Math.random() * 4);
+// let rabdomSelect = Math.floor(Math.random() * 4);
 
-if (rabdomSelect === 0) {
-  sayHello();
-} else if (rabdomSelect === 1) {
-  askNameSayHello();
-} else if (rabdomSelect === 2) {
-  singASong();
-} else {
-  sayGoodBye();
-}
+// if (rabdomSelect === 0) {
+//   sayHello();
+// } else if (rabdomSelect === 1) {
+//   askNameSayHello();
+// } else if (rabdomSelect === 2) {
+//   singASong();
+// } else {
+//   sayGoodBye();
+// }
 // end of code to replace
+
+const functionArr = [sayHello, askNameSayHello, singASong, sayGoodBye];
+
+let randomSelect = Math.floor(Math.random() * functionArr.length);
+functionArr[randomSelect]();
+
 
 console.log("\nEnd of Program");

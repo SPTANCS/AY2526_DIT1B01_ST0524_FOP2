@@ -46,5 +46,27 @@ console.log();
 
 let color = askUntilValid("Enter a color: ", isInOptions);
 console.log(`Your color is: ${color}`);
+console.log();
+
+function checkNumber(value) { // 100 and 200 or 500
+  let num = parseInt(value);
+
+  if (isNaN(num)) {
+    return false;
+  } else if (num >= 100 && num <= 200) {
+    return true;
+  } else if (num == 500) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+let someNumber2 = askUntilValid("Enter a number between 100 and 200 or 500: ", checkNumber);
+console.log(`Your number is: ${someNumber2}`);
+console.log();
+
+
 
 console.log("All inputs collected successfully!");
