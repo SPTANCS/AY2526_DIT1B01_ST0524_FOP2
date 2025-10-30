@@ -2,14 +2,13 @@ const input = require("readline-sync");
 
 console.clear();
 
+let userName = "";
 let interest = 1 / 100;
 let balance = 0;
 let dailyInt = 0;
 
 function userBalance() {
-  let userName = "";
-  let balance = 0;
-
+  // let balance = 0;
   userName = input.question("Please enter your name : ");
   balance = input.question("Please enter amount in the bank : ");
 }
