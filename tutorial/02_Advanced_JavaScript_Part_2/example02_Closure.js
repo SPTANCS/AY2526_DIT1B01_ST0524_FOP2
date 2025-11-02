@@ -1,9 +1,15 @@
+// Closure = How a function remembers those variables even after the outer scope has finished running.
+// Closure makes sure it "stays seen" when the outer function is gone.
+// 
+// Lexical scope defines which variables a function can access.
+// Closure is what happens when that function actually remembers and uses them later.
+// You can’t have closures without lexical scope — closures depend on lexical scope.
+//
 // Example: Demonstrating JavaScript Closures
 // This script implements a simple assignment tracker factory. Each
 // tracker keeps its own private `completed` list using closure. The
 // returned function (closure) has access to `studentName` and `completed`
 // even after `createAssignmentTracker` has finished executing.
-
 
 const input = require("readline-sync");
 

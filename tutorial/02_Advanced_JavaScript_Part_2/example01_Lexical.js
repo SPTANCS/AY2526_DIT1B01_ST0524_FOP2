@@ -1,3 +1,6 @@
+// Lexical Scope = Where a variable can be accessed (based on where the code is written).
+// Lexical scope defines the "what can be seen".
+//
 // Example: Demonstrating Lexical Scope in JavaScript
 // This file shows how inner functions retain access to variables
 // from the scope where they were defined (lexical scope / closure).
