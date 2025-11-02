@@ -1,4 +1,3 @@
-
 // Scope Chain in Closure Example
 // What Is a Scope Chain?
 //
