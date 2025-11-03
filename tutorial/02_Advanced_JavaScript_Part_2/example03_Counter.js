@@ -5,6 +5,7 @@
 // The privateCounter variable is not accessible from outside the module.
 // The changeBy function is a private helper function to modify the counter.
 // Usage example is provided at the end.
+//
 const counter = (function () {
     let privateCounter = 0;
     function changeBy(val) {

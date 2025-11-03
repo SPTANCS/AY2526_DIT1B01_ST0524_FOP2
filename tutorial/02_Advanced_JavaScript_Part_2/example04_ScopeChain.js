@@ -8,7 +8,7 @@
 //
 // This hierarchy of variable lookups is called the scope chain.
 // In a closure, the scope chain is what allows the inner function to “remember” variables from multiple levels above it.
-
+//
 const school = "SP"; // global variable
 
 // Outer function representing a course

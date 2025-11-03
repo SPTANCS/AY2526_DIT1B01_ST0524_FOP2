@@ -16,9 +16,11 @@ const input = require("readline-sync");
 // createAssignmentTracker(studentName)
 // - Purpose: returns a tracker function that manages a private list of
 //   completed tasks for `studentName`.
+//
 // - Inputs: `studentName` (string) used for logging.
 // - Output: a function (closure) with signature (action = 'display', task = "")
 //           which can 'display' the student's completed tasks or 'add' a task.
+//
 // - Closure behavior: the returned function keeps access to the local
 //   `completed` array and `studentName` even after the outer function
 //   has returned, allowing each tracker to maintain its own state.
@@ -46,23 +48,23 @@ console.log("=== Assignment Tracker Demo using Closures ===\n");
 const tasks = ["JavaScript Exercise 1", "Database Report", "Project Proposal", "Team Meeting", "Code Review Session"];
 
 // Create two separate trackers for different students
-const tracker1 = createAssignmentTracker("Lydia");
-const tracker2 = createAssignmentTracker("John");
+const tracker1Lydia = createAssignmentTracker("Lydia");
+const tracker2John  = createAssignmentTracker("John");
 
-// Randomly assign tasks to either tracker1 or tracker2
+// Randomly assign tasks to either tracker1Lydia or tracker2John
 for (let i = 0; i < tasks.length; i++) {
     console.clear();
     const task = tasks[i];
 
-    if (Math.random() < 0.5) {
-        tracker1('add', task);
+    if (Math.random() < 0.5) { // Math.random() produce a random value from 0.0 to 0.9999....
+        tracker1Lydia('add', task);
     } else {
-        tracker2('add', task);
+        tracker2John('add', task);
     }
     input.question("Press Enter to continue...");
 }
 
 // Finally, display each student's completed tasks
 console.clear();
-tracker1('display');
-tracker2('display');
+tracker1Lydia('display');
+tracker2John('display');
