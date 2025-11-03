@@ -39,27 +39,31 @@ function createAssignmentTracker(studentName) {
         }
     };
 }
-
 // === Demo === Using the Assignment Tracker Closure
 console.clear();
 console.log("=== Assignment Tracker Demo using Closures ===\n");
 
 // Sample tasks to be assigned
-const tasks = ["JavaScript Exercise 1", "Database Report", "Project Proposal", "Team Meeting", "Code Review Session"];
+const tasks = ["FOP Practical 2", "JavaScript Exercise 1", "Database Report", "Project Proposal", "Team Meeting", "Code Review Session"];
 
 // Create two separate trackers for different students
 const tracker1Lydia = createAssignmentTracker("Lydia");
 const tracker2John  = createAssignmentTracker("John");
+const tracker3Alice = createAssignmentTracker("Alice");
 
 // Randomly assign tasks to either tracker1Lydia or tracker2John
 for (let i = 0; i < tasks.length; i++) {
     console.clear();
     const task = tasks[i];
 
-    if (Math.random() < 0.5) { // Math.random() produce a random value from 0.0 to 0.9999....
+    let randomInt = Math.floor(Math.random() * 3); // 0, 1, 2
+
+    if (randomInt == 0) { 
         tracker1Lydia('add', task);
-    } else {
+    } else if (randomInt == 1) {
         tracker2John('add', task);
+    } else {
+        tracker3Alice('add', task);
     }
     input.question("Press Enter to continue...");
 }
@@ -68,3 +72,4 @@ for (let i = 0; i < tasks.length; i++) {
 console.clear();
 tracker1Lydia('display');
 tracker2John('display');
+tracker3Alice('display');
