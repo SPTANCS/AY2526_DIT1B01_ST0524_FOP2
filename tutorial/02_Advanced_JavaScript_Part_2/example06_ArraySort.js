@@ -38,6 +38,6 @@ function sortNumberAsc2(a, b) {
 myNumArray.sort((a, b) => a - b);
 console.table(myNumArray);
 
-myNumArray.sort(      );
+myNumArray.sort((a, b) => b - a);
 console.table(myNumArray);
 
