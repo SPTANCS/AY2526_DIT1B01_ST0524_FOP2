@@ -15,7 +15,7 @@ console.log("=== Student Portal Manager Demo ===\n");
 function createStudentPortal(studentName) {
 
   //declare an array is private to the student — it lives in the closure.
-  let ___________________;
+  let modules = [];
 
   console.log(`Portal created for ${studentName}.\n`);
 
