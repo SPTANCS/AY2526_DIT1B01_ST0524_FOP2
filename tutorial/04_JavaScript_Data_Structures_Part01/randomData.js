@@ -1,6 +1,6 @@
-// Returns a random integer between min (inclusive) and max (exclusive)
+// Returns a random integer between min (inclusive) and max (inclusive)
 function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min; 
+  return Math.floor(Math.random() * (max - min + 1)) + min; 
 }
 
 // Returns an array of random integers of specified size within the given range

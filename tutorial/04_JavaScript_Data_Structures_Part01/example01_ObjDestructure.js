@@ -2,7 +2,7 @@
 const sampleObj = {
   a : 4,
   b : 6,
-  sum: (a, b) => a + b 
+  sum: (x, y) => x + y 
 }
 
 // Basic destructuring
