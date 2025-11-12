@@ -87,5 +87,3 @@ const resultArr_05 = cars.filter(car => car.price <= 100000);
 console.log("someTest5 : ");
 console.log(resultArr_05);
 console.log();
-
-
