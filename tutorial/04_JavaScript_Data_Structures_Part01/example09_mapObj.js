@@ -11,27 +11,24 @@ const cars = [
     { brandName: 'Nissan', modelNumber: 'Altima-0123', price: 93000 }
 ];
 
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
 console.clear();
+console.log(cars);
 
-function displayBelow(element) {
-  if (element.price <= 100000) {
-    console.log(`${element.brandName} ${element.modelNumber} - $${element.price}`);
-  }
-}
+const carLabelArr = cars.map((car) => {
+  let str = `Brand    : ${car.brandName}\n` +
+            `Model    : ${car.modelNumber}\n` +
+            `Price    : SGD (${car.price})`;
 
-cars.forEach(displayBelow);
-console.log();
-
-cars.forEach(function (element) {
-  if (element.price <= 100000) {
-    console.log(`${element.brandName} ${element.modelNumber} - $${element.price}`);
-  }
+  return str; // result of your mapping
 });
 
+console.log(carLabelArr);
 console.log();
-cars.forEach( element => {
-  if (element.price <= 100000) {
-    console.log(`${element.brandName} ${element.modelNumber} - $${element.price}`);
-  }
-});
+
+// for (let i=0 ; i<carLabelArr.length ; i++ ) {
+//   console.log(carLabelArr[i] + "\n")
+// }
+
+carLabelArr.forEach((labelStr) => {console.log(labelStr + "\n")});
+
+
